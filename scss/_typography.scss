@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6{
 	h3.byline{
 		margin: 0px;
 		margin-top: $byline-margin;
-		margin-bottom: $byline-margin;
+		margin-bottom: $byline-margin*.3;
 		border-top: 3px black solid;
 		border-bottom: 3px black solid;
 	}

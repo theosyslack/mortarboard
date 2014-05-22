@@ -7800,35 +7800,35 @@ th.hide-for-touch {
   margin-top: .5em;
 }
 
-/* line 5, ../scss/typography.scss */
+/* line 5, ../scss/_typography.scss */
 body {
   font-family: "ff-tisa-web-pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
-/* line 9, ../scss/typography.scss */
+/* line 9, ../scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "kepler-std", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
-/* line 13, ../scss/typography.scss */
+/* line 13, ../scss/_typography.scss */
 .main-title {
   text-align: center;
 }
-/* line 15, ../scss/typography.scss */
+/* line 15, ../scss/_typography.scss */
 .main-title h1.title {
   margin: 0px;
   margin-bottom: .4em;
 }
-/* line 20, ../scss/typography.scss */
+/* line 20, ../scss/_typography.scss */
 .main-title h3.byline {
   margin: 0px;
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.3em;
   border-top: 3px black solid;
   border-bottom: 3px black solid;
 }
 
-/* line 28, ../scss/typography.scss */
+/* line 28, ../scss/_typography.scss */
 .content {
   margin-top: 0.4em;
   text-align: justify;
