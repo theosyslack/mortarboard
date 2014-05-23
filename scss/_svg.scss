@@ -1,0 +1,25 @@
+// SVG Stylesheet
+@import "compass/css3/transition";
+
+svg{
+	max-height: 600px ;
+	
+	-webkit-transform: translate(0px,0px);
+
+	&:hover{
+		@include transition(all .2s linear);
+		#mortarboard-whole{
+			-webkit-transform: translate(0px,-320px);
+		}
+	} 
+}
+#mortarboard-whole{
+	//fill: #003366;
+	@include transition(all .2s ease-in-out);
+	-webkit-transform: translate(0px,0px);
+	position: relative;
+	top: 10px;
+}
+#chin{
+	//fill: #ffcc00 !important;
+}

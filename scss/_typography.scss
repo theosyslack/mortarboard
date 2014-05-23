@@ -28,7 +28,23 @@ h1, h2, h3, h4, h5, h6{
 .content{
 	margin-top: $byline-margin*.4;
 	text-align: justify;
-	p{
-		// font-size: 1.32em;
+
+	.intro{
+		font-style: italic;
+		&::first-letter{
+			// width: 1em;
+			// margin-right: .1em;
+			// padding: 0em .1em;
+			// font-size: 3em;
+			// line-height: 1em;
+			// float:left;
+			
+			float:left;
+			padding: 0px;
+			margin:0px;
+			padding-right: .1em;
+			font-size: 3.7em;
+			line-height: .77em;
+		}
 	}
 }

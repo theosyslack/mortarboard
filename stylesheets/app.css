@@ -7790,12 +7790,12 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 1, ../scss/_layout.scss */
+/* line 2, ../scss/_layout.scss */
 .main-title {
   margin-top: 50px;
 }
 
-/* line 4, ../scss/_layout.scss */
+/* line 5, ../scss/_layout.scss */
 .columns {
   margin-top: .5em;
 }
@@ -7832,4 +7832,45 @@ h1, h2, h3, h4, h5, h6 {
 .content {
   margin-top: 0.4em;
   text-align: justify;
+}
+/* line 32, ../scss/_typography.scss */
+.content .intro {
+  font-style: italic;
+}
+/* line 34, ../scss/_typography.scss */
+.content .intro::first-letter {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  padding-right: .1em;
+  font-size: 3.7em;
+  line-height: .77em;
+}
+
+/* line 4, ../scss/_svg.scss */
+svg {
+  max-height: 600px;
+  -webkit-transform: translate(0px, 0px);
+}
+/* line 9, ../scss/_svg.scss */
+svg:hover {
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+/* line 11, ../scss/_svg.scss */
+svg:hover #mortarboard-whole {
+  -webkit-transform: translate(0px, -320px);
+}
+
+/* line 16, ../scss/_svg.scss */
+#mortarboard-whole {
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translate(0px, 0px);
+  position: relative;
+  top: 10px;
 }
