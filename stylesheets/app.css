@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* line 3, ../scss/_main.scss */
+* {
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 /* line 260, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.2/";
@@ -7790,12 +7799,12 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 2, ../scss/_layout.scss */
+/* line 4, ../scss/_layout.scss */
 .main-title {
   margin-top: 50px;
 }
 
-/* line 5, ../scss/_layout.scss */
+/* line 7, ../scss/_layout.scss */
 .columns {
   margin-top: .5em;
 }
@@ -7822,22 +7831,23 @@ h1, h2, h3, h4, h5, h6 {
 /* line 20, ../scss/_typography.scss */
 .main-title h3.byline {
   margin: 0px;
+  font-style: italic;
   margin-top: 1em;
   margin-bottom: 0.3em;
-  border-top: 3px black solid;
-  border-bottom: 3px black solid;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
 }
 
-/* line 28, ../scss/_typography.scss */
+/* line 29, ../scss/_typography.scss */
 .content {
   margin-top: 0.4em;
   text-align: justify;
 }
-/* line 32, ../scss/_typography.scss */
+/* line 33, ../scss/_typography.scss */
 .content .intro {
   font-style: italic;
 }
-/* line 34, ../scss/_typography.scss */
+/* line 35, ../scss/_typography.scss */
 .content .intro::first-letter {
   float: left;
   padding: 0px;
@@ -7847,30 +7857,33 @@ h1, h2, h3, h4, h5, h6 {
   line-height: .77em;
 }
 
-/* line 4, ../scss/_svg.scss */
+/* line 2, ../scss/_svg.scss */
 svg {
   max-height: 600px;
-  -webkit-transform: translate(0px, 0px);
 }
-/* line 9, ../scss/_svg.scss */
-svg:hover {
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-/* line 11, ../scss/_svg.scss */
+/* line 6, ../scss/_svg.scss */
 svg:hover #mortarboard-whole {
-  -webkit-transform: translate(0px, -320px);
+  -webkit-transform-origin: 100% 100%;
 }
 
-/* line 16, ../scss/_svg.scss */
-#mortarboard-whole {
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: translate(0px, 0px);
-  position: relative;
-  top: 10px;
+/* line 1, ../scss/_photo.scss */
+#instafeed {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+/* line 5, ../scss/_photo.scss */
+#instafeed li {
+  float: left;
+  width: 10%;
+}
+/* line 9, ../scss/_photo.scss */
+#instafeed li a img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 12, ../scss/_photo.scss */
+#instafeed li a img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }

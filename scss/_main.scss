@@ -1,0 +1,5 @@
+@import "compass/css3/transition";
+
+*{
+	@include transition(all .2s ease-in-out);
+}

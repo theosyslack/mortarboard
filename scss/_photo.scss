@@ -1,0 +1,18 @@
+#instafeed{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	li{
+		float: left;
+		width:10%;
+		a{
+			img{
+				@include filter(grayscale(100%));
+
+				&:hover{
+					@include filter(grayscale(0%));
+				}
+			}
+		}
+	}
+}
