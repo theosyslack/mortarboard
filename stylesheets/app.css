@@ -7861,12 +7861,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* line 47, ../scss/_typography.scss */
 .content .intro::first-letter {
+  background-image: url(/assets/diamond.svg);
   float: left;
+  color: white;
   padding: 0px;
   margin: 0px;
-  padding-right: .1em;
-  font-size: 3.7em;
-  line-height: .77em;
+  font-style: none;
+  font-weight: bold;
+  padding-left: .3em;
+  font-size: 3em;
+  line-height: 1.5em;
+  height: 1.5em;
+  width: 1.2em;
 }
 
 @-webkit-keyframes fadeIn {
@@ -7876,12 +7882,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* line 12, ../scss/_svg.scss */
-  3.57143% {
+  2.5% {
     opacity: 1;
   }
 
   /* line 12, ../scss/_svg.scss */
-  21.42857% {
+  22.5% {
     opacity: 1;
   }
 
@@ -7897,12 +7903,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* line 13, ../scss/_svg.scss */
-  3.57143% {
+  2.5% {
     opacity: 1;
   }
 
   /* line 13, ../scss/_svg.scss */
-  21.42857% {
+  22.5% {
     opacity: 1;
   }
 
@@ -7918,12 +7924,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* line 14, ../scss/_svg.scss */
-  3.57143% {
+  2.5% {
     opacity: 1;
   }
 
   /* line 14, ../scss/_svg.scss */
-  21.42857% {
+  22.5% {
     opacity: 1;
   }
 
@@ -7939,12 +7945,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* line 15, ../scss/_svg.scss */
-  3.57143% {
+  2.5% {
     opacity: 1;
   }
 
   /* line 15, ../scss/_svg.scss */
-  21.42857% {
+  22.5% {
     opacity: 1;
   }
 
@@ -7963,37 +7969,9 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 100%;
   height: 120%;
 }
-/* line 25, ../scss/_svg.scss */
+/* line 26, ../scss/_svg.scss */
 .mortarboard-banner #red-stars, .mortarboard-banner #four-pillars, .mortarboard-banner #waves, .mortarboard-banner #green-waves {
   opacity: 0;
-}
-/* line 28, ../scss/_svg.scss */
-.mortarboard-banner #red-stars {
-  -webkit-animation: fadeIn 28s ease-in-out 0s infinite;
-  -moz-animation: fadeIn 28s ease-in-out 0s infinite;
-  -o-animation: fadeIn 28s ease-in-out 0s infinite;
-  animation: fadeIn 28s ease-in-out 0s infinite;
-}
-/* line 34, ../scss/_svg.scss */
-.mortarboard-banner #four-pillars {
-  -webkit-animation: fadeIn 28s ease-in-out 6.28571s infinite;
-  -moz-animation: fadeIn 28s ease-in-out 6.28571s infinite;
-  -o-animation: fadeIn 28s ease-in-out 6.28571s infinite;
-  animation: fadeIn 28s ease-in-out 6.28571s infinite;
-}
-/* line 40, ../scss/_svg.scss */
-.mortarboard-banner #waves {
-  -webkit-animation: fadeIn 28s ease-in-out 12.57143s infinite;
-  -moz-animation: fadeIn 28s ease-in-out 12.57143s infinite;
-  -o-animation: fadeIn 28s ease-in-out 12.57143s infinite;
-  animation: fadeIn 28s ease-in-out 12.57143s infinite;
-}
-/* line 46, ../scss/_svg.scss */
-.mortarboard-banner #green-waves {
-  -webkit-animation: fadeIn 28s ease-in-out 18.85714s infinite;
-  -moz-animation: fadeIn 28s ease-in-out 18.85714s infinite;
-  -o-animation: fadeIn 28s ease-in-out 18.85714s infinite;
-  animation: fadeIn 28s ease-in-out 18.85714s infinite;
 }
 
 /* line 1, ../scss/_photo.scss */

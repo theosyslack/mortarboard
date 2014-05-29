@@ -45,19 +45,18 @@ h1, h2, h3, h4, h5, h6{
 	.intro{
 		font-style: italic;
 		&::first-letter{
-			// width: 1em;
-			// margin-right: .1em;
-			// padding: 0em .1em;
-			// font-size: 3em;
-			// line-height: 1em;
-			// float:left;
-			
+			background-image: url(/assets/diamond.svg);
 			float:left;
+			color: white;
 			padding: 0px;
 			margin:0px;
-			padding-right: .1em;
-			font-size: 3.7em;
-			line-height: .77em;
+			font-style: none;
+			font-weight: bold;
+			padding-left: .3em;
+			font-size: 3em;
+			line-height: 1.5em;
+			height: 1.5em;
+			width: 1.2em;
 		}
 	}
 }
