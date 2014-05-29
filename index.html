@@ -8,36 +8,31 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script type="text/javascript" src="//use.typekit.net/fau0kac.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src="bower_components/instafeed.js/instafeed.min.js"></script>
   </head>
   <body>
     <div data-magellan-expedition="fixed">
         <dl class="sub-nav">
           <dd data-magellan-arrival="section-one"><a href="#section-one">Section One</a></dd>
           <dd data-magellan-arrival="section-two"><a href="#section-two">Section Two</a></dd>
-        </dl>
-      </div>
-    <!-- Being Intro Title -->
-    <div class="row">
-      <div class="small-12 large-12 columns main-title">
-        <h1 class="title">
-          Mortarboard Story
-          <br/>
-          <em> Size:
+          <dd style="float:right"><em> Size:
               <span class="show-for-small-only">Small</span>
               <span class="show-for-medium-only">Medium</span>
               <span class="show-for-large-only">Large</span>
               <span class="show-for-xlarge-up">X-Large and Up</span>
-           </em>
+           </em></dd>
+        </dl>
+      </div>
+    <!-- Being Intro Title -->
+    <div class="row">
+      <div id="main-title" class="small-12 large-12 columns">
+        <img class="mortarboard-banner svg" src="assets/mortarboard.svg">
+        <!-- <h1 class="title">
+          <span class="arc-up">Mortarboard Story</span>
         </h1>
-        <div class="small-12 columns">
-          <div id="svg-guy">
-            <img class="small-10 medium-6 large-5 svg" src="assets/face.svg"/>
-          </div>
-        </div>
+          <div class="small-12 columns spacer">&nbsp;</div>
           <h3 class="small-2 medium-3 columns"></h3>
-          <h3 class="small-8 medium-6 columns byline">By Ann Nonymous</h3>
-          <h3 class="small-2 medium-3 columns "></h3>
+          <h3 class="small-8 medium-6 columns arc-down byline">By Joni Moths Mueller</h3>
+          <h3 class="small-2 medium-3 columns "></h3> -->
       </div>
     </div>
     <!-- Begin Content -->
@@ -125,17 +120,6 @@
         </div>
     </div>
   </div>
-    <script type="text/javascript">
-      var feed = new Instafeed({
-          get: 'tagged',
-          tagName: 'marquette',
-          clientId: '169665063da446d6a8e41a0511982618',
-          resolution: 'thumbnail',
-          limit: '10',
-          template: '<li><a href="{{link}}"><img src="{{image}}"/></a></li>',
-      });
-      feed.run();
-    </script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
@@ -145,7 +129,7 @@
             translateY: "-1em",
             rotateZ: "45deg"
         }, { 
-             delay: 200,
+            delay: 200,
             duration: 1000,
             loop: 1,
             easing: "easeInOutSine"
@@ -188,8 +172,23 @@
       });
     </script>
     <script src="bower_components/velocity/jquery.velocity.min.js"></script>
+    <script src="bower_components/instafeed.js/instafeed.min.js"></script>
     <script type="text/javascript">
-      
+      var feed = new Instafeed({
+          get: 'tagged',
+          tagName: 'marquette',
+          clientId: '169665063da446d6a8e41a0511982618',
+          resolution: 'thumbnail',
+          limit: '10',
+          template: '<li><a href="{{link}}"><img src="{{image}}"/></a></li>',
+      });
+      feed.run();
+    </script>
+    <!-- Arc Text -->
+    <script src="bower_components/ArcText/jquery.arctext.js"></script>
+    <script type="text/javascript">
+      $(".arc-up").arctext({radius: 300});
+      $(".arc-down").arctext({radius: 300, dir: -1})
     </script>
   </body>
 </html>

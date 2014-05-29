@@ -1,5 +1,5 @@
-$body-font-family: "ff-tisa-web-pro" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$headline-font-family: "kepler-std" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "soleil","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headline-font-family: "foco" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $byline-margin: 1em;
 
 body{
@@ -10,20 +10,32 @@ h1, h2, h3, h4, h5, h6{
 	font-family: $headline-font-family;
 }
 
-.main-title{
+#main-title{
 	text-align: center;
+	color: white;
+	overflow:hidden;
+	.mortarboard-banner{
+		top:0px;
+		left:0px;
+		width:100%;
+	}
 	h1.title{
 		margin: 0px;
-		// font-size: 4em;
+		color: white;
+		font-weight: black;
 		margin-bottom: .4em;
+	}
+	.spacer{
+		min-height: 1em;
 	}
 	h3.byline{
 		margin: 0px;
+		color: white;
 		font-style: italic;
 		margin-top: $byline-margin;
 		margin-bottom: $byline-margin*.3;
-		border-top: 1px black solid;
-		border-bottom: 1px black solid;
+		// border-top: 1px black solid;
+		// border-bottom: 1px black solid;
 	}
 }
 .content{

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="whole-face" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 400" enable-background="new 0 0 480 400" xml:space="preserve">
+<g id="head">
+	<path id="chin" fill="none" stroke="#000000" stroke-miterlimit="10" d="M384.4,249.8c0,80.7-59.6,146.1-146.1,146.1
+		S92.2,330.4,92.2,249.8S103.6,119,238.3,119S384.4,169.1,384.4,249.8z"/>
+	<path id="mouth" fill="none" stroke="#000000" stroke-miterlimit="10" d="M177.8,308.5c0,0,15.1,25.4,58.3,25.4s68-25.4,68-25.4"/>
+	<circle id="left-eye" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="166.9" cy="219" r="11.6"/>
+	<circle id="right-eye" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="312.4" cy="219" r="11.6"/>
+	<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="241,207.4 241,245.1 223.6,245.1 223.6,287.9 241,287.9 	
+		"/>
+</g>
+<g id="mortarboard-whole">
+	<path id="hat" d="M98.9,133.6v41.2c0,0,45.8,42,138.9,42s138-42,138-42v-40.1"/>
+	<polygon id="mortarboard" stroke="#FFFFFF" stroke-miterlimit="10" points="445.4,103.1 236,195.2 26.6,103.1 236,10.9 	"/>
+	<polyline id="tassle" stroke="#FFFFFF" stroke-miterlimit="10" points="251.4,105.5 337.6,150.7 337.6,257.1 330,253.3 330,154.9 
+		247.8,110.3 	"/>
+	<ellipse id="tassle-holder" stroke="#FFFFFF" stroke-miterlimit="10" cx="237.5" cy="103.6" rx="17.8" ry="7.8"/>
+</g>
+</svg>

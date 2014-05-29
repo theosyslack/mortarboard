@@ -1,8 +1,8 @@
 // Layout Stylesheet
 @import "compass/css3/filter";
-
-.main-title{
-	margin-top: 50px;
+#main-title{
+	// background-image: url('/assets/mortarboard.svg');
+	background-size: 100%; 
 }
 .columns{
 	margin-top: .5em;
