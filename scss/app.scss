@@ -1,11 +1,17 @@
-@import "main";
 @import "settings";
 @import "foundation";
-@import "layout";
 @import "modern-scale";
+//Import As Few Compass Files as Possible
+@import "compass/css3/filter";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+//
+@import "main";
+@import "layout";
 @import "typography";
 @import "svg";
 @import "photo";
+@import "slider";
 
 // Or selectively include components
 // @import

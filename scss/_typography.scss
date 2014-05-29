@@ -1,5 +1,6 @@
-$body-font-family: "soleil","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$headline-font-family: "foco" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+$body-font-family: "Proxima-Nova","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headline-font-family: "Proxima-Nova" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $byline-margin: 1em;
 
 body{
@@ -12,17 +13,15 @@ h1, h2, h3, h4, h5, h6{
 
 #main-title{
 	text-align: center;
-	color: white;
-	overflow:hidden;
 	.mortarboard-banner{
 		top:0px;
 		left:0px;
 		width:100%;
 	}
 	h1.title{
+		@include transition(none);
 		margin: 0px;
-		color: white;
-		font-weight: black;
+		font-weight: bold;
 		margin-bottom: .4em;
 	}
 	.spacer{
@@ -30,7 +29,6 @@ h1, h2, h3, h4, h5, h6{
 	}
 	h3.byline{
 		margin: 0px;
-		color: white;
 		font-style: italic;
 		margin-top: $byline-margin;
 		margin-bottom: $byline-margin*.3;
@@ -45,18 +43,18 @@ h1, h2, h3, h4, h5, h6{
 	.intro{
 		font-style: italic;
 		&::first-letter{
-			background-image: url(/assets/diamond.svg);
+			background-image: url(/assets/img/diamond.svg);
 			float:left;
 			color: white;
+			text-align: center;
 			padding: 0px;
 			margin:0px;
-			font-style: none;
+			font-style: normal;
 			font-weight: bold;
-			padding-left: .3em;
 			font-size: 3em;
 			line-height: 1.5em;
 			height: 1.5em;
-			width: 1.2em;
+			width: 1.5em;
 		}
 	}
 }

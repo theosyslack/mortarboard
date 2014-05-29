@@ -1,0 +1,13 @@
+ul#slider{
+	margin:0px;
+	padding:0px;
+	@include perspective(5000);
+	li.face{
+		list-style: none;
+		display: inline-block;
+		display:block;
+		width: 100px;
+		height: 300px;
+		position: absolute;
+	}
+}

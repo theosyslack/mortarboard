@@ -8,9 +8,8 @@
 		a{
 			img{
 				@include filter(grayscale(100%));
-
 				&:hover{
-					@include filter(grayscale(0%));
+				@include filter(grayscale(0%));
 				}
 			}
 		}
