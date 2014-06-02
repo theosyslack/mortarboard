@@ -1,13 +1,33 @@
 ul#slider{
 	margin:0px;
 	padding:0px;
-	@include perspective(5000);
-	li.face{
-		list-style: none;
-		display: inline-block;
-		display:block;
-		width: 100px;
-		height: 300px;
+	.front,.back{
 		position: absolute;
+		list-style: none;
+		display: block;
+		background:orange;
+		padding-top: 4em;
+		padding-bottom: 4em;
+		padding-left: 1.3em;
+		padding-left: 1.3em;
+		@include transform(rotateY(180deg));
+		@include backface-visibility(hidden);
 	}
+	.active{
+		@include transform(rotateY(0deg));
+	}
+	li.face{
+		display: none;
+	}
+}
+.slider.left, .slider.right{
+	margin-top: .25em;
+	margin-bottom: .25em;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	text-align: center;
+	background: #222222;
+	color: white;
+
+	cursor: pointer;
 }

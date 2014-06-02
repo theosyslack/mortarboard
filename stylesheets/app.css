@@ -8000,16 +8000,45 @@ h1, h2, h3, h4, h5, h6 {
 ul#slider {
   margin: 0px;
   padding: 0px;
-  -moz-perspective: 5000;
-  -webkit-perspective: 5000;
-  perspective: 5000;
 }
-/* line 5, ../scss/_slider.scss */
-ul#slider li.face {
-  list-style: none;
-  display: inline-block;
-  display: block;
-  width: 100px;
-  height: 300px;
+/* line 4, ../scss/_slider.scss */
+ul#slider .front, ul#slider .back {
   position: absolute;
+  list-style: none;
+  display: block;
+  background: orange;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  padding-left: 1.3em;
+  padding-left: 1.3em;
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 16, ../scss/_slider.scss */
+ul#slider .active {
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+/* line 19, ../scss/_slider.scss */
+ul#slider li.face {
+  display: none;
+}
+
+/* line 23, ../scss/_slider.scss */
+.slider.left, .slider.right {
+  margin-top: .25em;
+  margin-bottom: .25em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+  background: #222222;
+  color: white;
+  cursor: pointer;
 }
