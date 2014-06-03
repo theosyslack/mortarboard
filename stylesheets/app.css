@@ -7808,6 +7808,12 @@ th.hide-for-touch {
   margin-top: .5em;
 }
 
+/* line 10, ../scss/_layout.scss */
+footer {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
 /* line 6, ../scss/_typography.scss */
 body {
   font-family: "Proxima-Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -8000,38 +8006,18 @@ h1, h2, h3, h4, h5, h6 {
 ul#slider {
   margin: 0px;
   padding: 0px;
-}
-/* line 4, ../scss/_slider.scss */
-ul#slider .front, ul#slider .back {
-  position: absolute;
   list-style: none;
-  display: block;
-  background: orange;
-  padding-top: 4em;
-  padding-bottom: 4em;
-  padding-left: 1.3em;
-  padding-left: 1.3em;
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  transform-style: preserve-3d;
 }
-/* line 16, ../scss/_slider.scss */
-ul#slider .side.active {
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-}
-/* line 19, ../scss/_slider.scss */
-ul#slider li.face {
-  display: none;
+/* line 7, ../scss/_slider.scss */
+ul#slider .text-content {
+  padding-top: 3em;
 }
 
-/* line 23, ../scss/_slider.scss */
+/* line 11, ../scss/_slider.scss */
 .slider.left, .slider.right {
   margin-top: .25em;
   margin-bottom: .25em;
@@ -8041,4 +8027,41 @@ ul#slider li.face {
   background: #222222;
   color: white;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 40.063em) {
+  /* line 23, ../scss/_slider.scss */
+  .front, .back {
+    position: absolute;
+    list-style: none;
+    display: block;
+    background: orange;
+    padding-bottom: .5em;
+    -moz-perspective: 1000;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* line 33, ../scss/_slider.scss */
+  .side.active {
+    z-index: 1;
+  }
+
+  /* line 37, ../scss/_slider.scss */
+  .side.notActive {
+    z-index: -1;
+  }
+
+  /* line 41, ../scss/_slider.scss */
+  li.face {
+    display: none;
+    border-bottom: none;
+  }
+  /* line 44, ../scss/_slider.scss */
+  li.face img {
+    max-width: 100%;
+  }
 }

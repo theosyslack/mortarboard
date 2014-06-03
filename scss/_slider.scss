@@ -1,23 +1,11 @@
 ul#slider{
 	margin:0px;
 	padding:0px;
-	.front,.back{
-		position: absolute;
-		list-style: none;
-		display: block;
-		background:orange;
-		padding-top: 4em;
-		padding-bottom: 4em;
-		padding-left: 1.3em;
-		padding-left: 1.3em;
-		@include transform(rotateY(180deg));
-		@include backface-visibility(hidden);
-	}
-	.side.active{
-		@include transform(rotateY(0deg));
-	}
-	li.face{
-		display: none;
+	list-style: none;
+	@include perspective(1000);
+	transform-style: preserve-3d;
+	.text-content{
+		padding-top: 3em;
 	}
 }
 .slider.left, .slider.right{
@@ -28,6 +16,33 @@ ul#slider{
 	text-align: center;
 	background: #222222;
 	color: white;
-
 	cursor: pointer;
+
+}
+@media only screen and (min-width: 40.063em) {
+	.front,.back{
+		position: absolute;
+		list-style: none;
+		display: block;
+		background:orange;
+		padding-bottom: .5em;
+		@include perspective(1000);
+		// @include rotateY(-180deg, 1000);
+		@include backface-visibility(hidden);
+	}
+	.side.active{
+		// @include rotateY(0deg, 1000);
+		z-index: 1;
+	}
+	.side.notActive{
+		// @include rotateY(0deg, 1000);
+		z-index: -1;
+	}
+	li.face{
+		display: none;
+		border-bottom: none;
+		img{
+			max-width: 100%;
+		}
+	}
 }

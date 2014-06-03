@@ -29,37 +29,107 @@
     <!-- Begin Content -->
     <div class="content row">
       <div class="small-12 columns">
-        <div class="small-12 medium-2 columns">
-        </div>
-        <div class="small-12 medium-8 columns intro">
+        <div class="small-12 medium-8 medium-offset-2 columns intro">
           <p>Ghich of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden.</p>
-        </div>
-         <div class="small-12 medium-2 columns">
         </div>
         <!-- <ul class="small-12 columns show-for-medium-up" id="instafeed"></ul>  -->
       </div>
 
-      <div class="small-12 columns">
-        <span class="slider left small-2 columns"><</span>
-        <ul id="slider" class="small-8 columns">
-          <li class="side back small-12"> Back Side </li>
-          <li class="side front small-12 active"> Front Side</li>
-          <li class="face small-12">
-            <h1> Act like a lady. </h1>
-          </li>
-          <li class="face small-12">
-            <img src="http://placehold.it/250x350"/> Two
-          </li>
-          <li class="face small-12">
-            <img src="http://placehold.it/250x350"/> Three
-          </li>
-          <li class="face small-12">
-            <img src="http://placehold.it/250x350"/> Four
-          </li>
+      <div class="slider small-12 columns">
+        <!-- 
+            LEFT TOGGLE
+         -->
+        <span class="slider left show-for-medium-up medium-2 columns"><</span>
+        <!-- 
+          RIGHT TOGGLE
+         -->
+        <span class="slider right show-for-medium-up medium-2 columns">></span>
+        <!-- 
+  
+          #slider begins
+    
+         -->
+        <ul id="slider" class="small-12 medium-8 columns">
+          <!-- the front side -->
+          <li class="side back small-12 show-for-medium-up"> Back Side </li>
+          <!-- the back side -->
+          <li class="side front small-12 show-for-medium-up active"> Front Side</li>
+          
+          <!-- 
 
+            FIRST FACE 
+
+            -->
+          <li class="face small-12">
+            <div class="text-content small-12 medium-8 columns" >
+              <h1> 1. Think like a lady. </h1>
+              <p class="small-11"> Which of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden. <p>
+            </div>
+            <div class="imagecolumn small-12 medium-4 columns">
+              <img class="small-12" src="http://placehold.it/250x350"/>
+              <hr/>
+              <img class="small-12" src="http://placehold.it/250x250"/>
+            </div>
+          </li>
+          <!-- 
+
+            SECOND FACE 
+
+            -->
+          <li class="face small-12">
+            <div class="text-content small-12 medium-8 columns">
+              <h1> 2. 4 Down, 2 to go </h1>
+              <p class="small-11"> Which of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden. <p>
+            </div>
+            <div class="imagecolumn small-12 medium-4 columns">
+              <img class="small-12" src="http://placehold.it/250x350"/>
+              <hr/>
+              <img class="small-12" src="http://placehold.it/250x250"/>
+            </div>
+          </li>
+          <!-- 
+
+            THIRD FACE 
+
+            -->
+          <li class="face small-12">
+             <div class="text-content small-12 medium-8 columns">
+              <h1> 3. Future DDS</h1>
+              <p class="small-11"> Which of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden. <p>
+            </div>
+            <div class="imagecolumn small-12 medium-4 columns">
+              <img class="small-12" src="http://placehold.it/250x350"/>
+              <hr/>
+              <img class="small-12" src="http://placehold.it/250x250"/>
+            </div>
+          </li>
+            <!-- 
+
+            FOURTH FACE 
+
+            -->
+          <li class="face small-12">
+
+            <div class="text-content small-12 medium-8 columns">
+              <h1> 4. Dr.Jadin </h1>
+              <p class="small-11"> Which of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden. <p>
+            </div>
+            <div class="imagecolumn small-12 medium-4 columns">
+              <img class="small-12" src="http://placehold.it/250x350"/>
+              <hr/>
+              <img class="small-12" src="http://placehold.it/250x250"/>
+            </div>
+          </li>
         </ul>
-        <span class="slider right small-2 columns">></span>    
+        
+         <!-- 
+  
+          #slider ends
+    
+         -->   
+       
       </div>
+      <footer class="small-12 columns"> This is a footer</footer> 
     </div>
   </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -86,19 +156,19 @@
     <!-- Arc Text -->
     <script src="bower_components/ArcText/jquery.arctext.js"></script>
     <script type="text/javascript">
-      $(".title").arctext({radius: 1000})
+      $(".title").arctext({radius: 1500})
     </script>
     <!-- slider animation -->
     <script type="text/javascript">
-      front = $("#slider li.front");
-      back = $("#slider li.back");
-      notActive = $("#slider .side:not('.active')");
-      active = $("#slider .side.active");
+      var front = $("#slider li.front");
+      var back = $("#slider li.back");
+      var notActive = $("#slider .side:not('.active')");
+      var active = $("#slider .side.active");
 
-      left = $(".slider.left");
-      right = $(".slider.right");
+      var left = $(".slider.left");
+      var right = $(".slider.right");
 
-      faces = $("#slider").children("li.face");
+      var faces = $("#slider").children("li.face");
       i = 0;
       
       front.css("background","green");
@@ -106,6 +176,14 @@
 
       $(document).ready(function(){
         front.html($(faces[0]).html());
+        tallest = 0;
+        for (var i = faces.length - 1; i >= 0; i--) {
+          height = parseInt($(faces[i]).css("height"));
+          if (height > tallest) {
+            tallest = height;
+          };
+        };
+        $("#slider .front").css("min-height",tallest)
       });
 
       function faceSwap(direction){
@@ -113,6 +191,7 @@
             //
             // If Positive
             //
+
             i++;
             if (i >= faces.length){
               i = 0;
@@ -123,13 +202,20 @@
           }
           else if(direction == "-"){
             //
-            // If Positive
+            // If Negative
             //
             i--;
             if (i <= -1){
               i = faces.length - 1;
             }
             notActive.html($(faces[i]).html());
+
+            $("#slider")
+              .velocity({rotateY: 360},{duration: 200});
+
+            // 
+            // End Negative
+            // 
           }
           else{
             console.error("faceSwap needs + or - to work")
@@ -147,7 +233,6 @@
       right.click(function(){
           faceSwap("+");
       });
-
 
     </script>
   </body>
