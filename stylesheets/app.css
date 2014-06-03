@@ -8020,7 +8020,7 @@ ul#slider .front, ul#slider .back {
   backface-visibility: hidden;
 }
 /* line 16, ../scss/_slider.scss */
-ul#slider .active {
+ul#slider .side.active {
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);

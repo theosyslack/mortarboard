@@ -13,7 +13,7 @@ ul#slider{
 		@include transform(rotateY(180deg));
 		@include backface-visibility(hidden);
 	}
-	.active{
+	.side.active{
 		@include transform(rotateY(0deg));
 	}
 	li.face{

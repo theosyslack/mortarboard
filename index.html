@@ -42,10 +42,10 @@
       <div class="small-12 columns">
         <span class="slider left small-2 columns"><</span>
         <ul id="slider" class="small-8 columns">
-          <li class="back small-12"> Back Side </li>
-          <li class="front small-12 active"> Front Side</li>
+          <li class="side back small-12"> Back Side </li>
+          <li class="side front small-12 active"> Front Side</li>
           <li class="face small-12">
-            <img src="http://placehold.it/250x350"/> One
+            <h1> Act like a lady. </h1>
           </li>
           <li class="face small-12">
             <img src="http://placehold.it/250x350"/> Two
@@ -92,64 +92,60 @@
     <script type="text/javascript">
       front = $("#slider li.front");
       back = $("#slider li.back");
+      notActive = $("#slider .side:not('.active')");
+      active = $("#slider .side.active");
 
       left = $(".slider.left");
       right = $(".slider.right");
 
       faces = $("#slider").children("li.face");
       i = 0;
-      currentFace = faces[i];
-      nextFace = faces[i+1];
+      
       front.css("background","green");
       back.css("background","orange");
 
+      $(document).ready(function(){
+        front.html($(faces[0]).html());
+      });
+
       function faceSwap(direction){
           if(direction == "+"){
+            //
+            // If Positive
+            //
+            i++;
+            if (i >= faces.length){
+              i = 0;
+            }
+            notActive.html($(faces[i]).html());
 
+            console.log(i)
           }
           else if(direction == "-"){
-            i = i - 1;
-
-            if(i <= -1){
-                i = (faces.length);
+            //
+            // If Positive
+            //
+            i--;
+            if (i <= -1){
+              i = faces.length - 1;
             }
-            else if (i == 0){
-
-            }
-            else{
-
-            };
-
-            currentFace = faces[i];
-            console.log("Current Face = "+ currentFace);
-            nextFace = faces[(i)-1];
-            console.log("Next Face = "+ nextFace);
-            
-            front.toggleClass("active");
-            back.toggleClass("active");
-            console.log("The direction is negative. i = " + i);
-
-            $("#slider li.active").html($(currentFace).html());
-            console.log("The active panel has this content - " + $(currentFace).html());
-            $("#slider li:not(.active)").html($(nextFace).html())
-            console.log("The inactive panel has this content - " + $(nextFace).html());
+            notActive.html($(faces[i]).html());
           }
           else{
             console.error("faceSwap needs + or - to work")
           };
-          
-       } ;
-      $(document).ready(function(){
-        front.html($(currentFace).html());
-        back.html($(nextFace).html());
+          active.removeClass("active");
+          notActive.addClass("active");
+          notActive = $("#slider .side:not('.active')");
+          active = $("#slider .side.active");
 
-        i = i+1;
-        currentFace = faces[i];
-        nextFace = faces[i+1];
-      });
+       } ;
 
       left.click(function(){
           faceSwap("-");
+      });
+      right.click(function(){
+          faceSwap("+");
       });
 
 
