@@ -50,17 +50,12 @@
     
          -->
         <ul id="slider" class="small-12 medium-8 columns">
-          <!-- the front side -->
-          <li class="side back small-12 show-for-medium-up"> Back Side </li>
-          <!-- the back side -->
-          <li class="side front small-12 show-for-medium-up active"> Front Side</li>
+
           
-          <!-- 
+        
+          <!-- FIRST FACE -->
 
-            FIRST FACE 
-
-            -->
-          <li class="face small-12">
+          <li class="face small-12 active">
             <div class="text-content small-12 medium-8 columns" >
               <h1> 1. Think like a lady. </h1>
               <p class="small-11"> Which of the young men does she like the best? Parting tracked by arriving…perpetual payment of the perpetual loan, Growing among black folks as among white, They have cleared the beams away…they tenderly lift me forth. Landscapes projected masculine full-sized and golden. <p>
@@ -69,13 +64,12 @@
               <img class="small-12" src="http://placehold.it/250x350"/>
               <hr/>
               <img class="small-12" src="http://placehold.it/250x250"/>
+
             </div>
           </li>
-          <!-- 
 
-            SECOND FACE 
+          <!-- SECOND FACE -->
 
-            -->
           <li class="face small-12">
             <div class="text-content small-12 medium-8 columns">
               <h1> 2. 4 Down, 2 to go </h1>
@@ -87,11 +81,9 @@
               <img class="small-12" src="http://placehold.it/250x250"/>
             </div>
           </li>
-          <!-- 
 
-            THIRD FACE 
+          <!-- THIRD FACE -->
 
-            -->
           <li class="face small-12">
              <div class="text-content small-12 medium-8 columns">
               <h1> 3. Future DDS</h1>
@@ -103,11 +95,9 @@
               <img class="small-12" src="http://placehold.it/250x250"/>
             </div>
           </li>
-            <!-- 
 
-            FOURTH FACE 
+            <!-- FOURTH FACE -->
 
-            -->
           <li class="face small-12">
 
             <div class="text-content small-12 medium-8 columns">
@@ -136,18 +126,18 @@
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
      <script src="bower_components/velocity/jquery.velocity.min.js"></script>
-    <script src="bower_components/instafeed.js/instafeed.min.js"></script>
-    <script type="text/javascript">
-      var feed = new Instafeed({
-          get: 'tagged',
-          tagName: 'marquette',
-          clientId: '169665063da446d6a8e41a0511982618',
-          resolution: 'thumbnail',
-          limit: '10',
-          template: '<li><a class="insta" href="{{link}}"><img src="{{image}}"/></a></li>',
-      });
-      feed.run();
-    </script>
+     <script src="bower_components/instafeed.js/instafeed.min.js"></script>
+     <script type="text/javascript">
+    //   var feed = new Instafeed({
+    //       get: 'tagged',
+    //       tagName: 'marquette',
+    //       clientId: '169665063da446d6a8e41a0511982618',
+    //       resolution: 'thumbnail',
+    //       limit: '10',
+    //       template: '<li><a class="insta" href="{{link}}"><img src="{{image}}"/></a></li>',
+    //   });
+    //   feed.run();
+      </script>
     <!-- FitText -->
     <script src="bower_components/FitText.js/jquery.fittext.js"></script>
     <script type="text/javascript">
@@ -160,71 +150,69 @@
     </script>
     <!-- slider animation -->
     <script type="text/javascript">
-      var front = $("#slider li.front");
-      var back = $("#slider li.back");
-      var notActive = $("#slider .side:not('.active')");
-      var active = $("#slider .side.active");
-
       var left = $(".slider.left");
       var right = $(".slider.right");
-
       var faces = $("#slider").children("li.face");
-      i = 0;
-      
-      front.css("background","green");
-      back.css("background","orange");
-
-      $(document).ready(function(){
-        front.html($(faces[0]).html());
-        tallest = 0;
-        for (var i = faces.length - 1; i >= 0; i--) {
-          height = parseInt($(faces[i]).css("height"));
-          if (height > tallest) {
-            tallest = height;
-          };
-        };
-        $("#slider .front").css("min-height",tallest)
-      });
+      var facelength = faces.length-1;
+      var relevantFaces = [facelength, 0, 1];
 
       function faceSwap(direction){
+          var lastFace = relevantFaces[0];
+          var currentFace;
+          $(faces).css("background","green");
           if(direction == "+"){
-            //
-            // If Positive
-            //
 
-            i++;
-            if (i >= faces.length){
-              i = 0;
-            }
-            notActive.html($(faces[i]).html());
-
-            console.log(i)
+            for (var i = relevantFaces.length - 1; i >= 0; i--) {
+              relevantFaces[i] = relevantFaces[i] + 1;
+            };
           }
-          else if(direction == "-"){
-            //
-            // If Negative
-            //
-            i--;
-            if (i <= -1){
-              i = faces.length - 1;
-            }
-            notActive.html($(faces[i]).html());
 
-            $("#slider")
-              .velocity({rotateY: 360},{duration: 200});
+          else if(direction == "-"){ 
 
-            // 
-            // End Negative
-            // 
+            for (var i = relevantFaces.length - 1; i >= 0; i--) {
+              relevantFaces[i] = relevantFaces[i] - 1;
+            };
           }
+
           else{
-            console.error("faceSwap needs + or - to work")
-          };
-          active.removeClass("active");
-          notActive.addClass("active");
-          notActive = $("#slider .side:not('.active')");
-          active = $("#slider .side.active");
 
+            console.error("faceSwap needs + or - to work");
+
+          };
+
+          //Range checking
+
+          for (var ind = relevantFaces.length - 1; ind >= 0; ind--) {
+
+            if(relevantFaces[ind] >= faces.length){
+              relevantFaces[ind] = 0;
+            }
+
+            if(relevantFaces[ind] < 0){
+              relevantFaces[ind] = faces.length-1;
+            }
+
+          };
+
+          currentFace = relevantFaces[0];
+          console.log("lastFace: "+ lastFace);
+          console.log("currentFace: "+ currentFace);
+          $(faces[lastFace]).css("opacity","1");
+          $(faces[currentFace]).css("opacity","1");
+          $(faces).velocity({
+            rotateY: -180
+          },{duration:0});
+          $(faces[lastFace]).velocity({
+            rotateY: 180,
+          });
+          $(faces[currentFace]).velocity({
+            rotateY: 0
+          });
+          $(faces).removeClass("active");
+
+          $(faces[relevantFaces[1]]).addClass("active");
+
+       console.log(relevantFaces)
        } ;
 
       left.click(function(){

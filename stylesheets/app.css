@@ -7868,10 +7868,12 @@ h1, h2, h3, h4, h5, h6 {
 /* line 45, ../scss/_typography.scss */
 .content .intro::first-letter {
   background-image: url(/assets/img/diamond.svg);
+  background-repeat: no-repeat;
   float: left;
   color: white;
   text-align: center;
   padding: 0px;
+  padding-right: .2em;
   margin: 0px;
   font-style: normal;
   font-weight: bold;
@@ -8004,6 +8006,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1, ../scss/_slider.scss */
 ul#slider {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -8011,56 +8017,57 @@ ul#slider {
   -webkit-perspective: 1000;
   perspective: 1000;
   transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-/* line 7, ../scss/_slider.scss */
+/* line 9, ../scss/_slider.scss */
 ul#slider .text-content {
   padding-top: 3em;
 }
 
-/* line 11, ../scss/_slider.scss */
+/* line 13, ../scss/_slider.scss */
 .slider.left, .slider.right {
   margin-top: .25em;
   margin-bottom: .25em;
   padding-top: 4em;
   padding-bottom: 4em;
   text-align: center;
-  background: #222222;
+  background: green;
   color: white;
   cursor: pointer;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 23, ../scss/_slider.scss */
-  .front, .back {
+  /* line 25, ../scss/_slider.scss */
+  .face.active {
+    visibility: visible;
+  }
+
+  /* line 29, ../scss/_slider.scss */
+  .face {
     position: absolute;
-    list-style: none;
-    display: block;
-    background: orange;
-    padding-bottom: .5em;
-    -moz-perspective: 1000;
-    -webkit-perspective: 1000;
-    perspective: 1000;
+    top: 0;
+    left: 0;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
-  /* line 33, ../scss/_slider.scss */
-  .side.active {
-    z-index: 1;
-  }
-
-  /* line 37, ../scss/_slider.scss */
-  .side.notActive {
-    z-index: -1;
-  }
-
-  /* line 41, ../scss/_slider.scss */
+  /* line 35, ../scss/_slider.scss */
   li.face {
-    display: none;
-    border-bottom: none;
+    *zoom: 1;
   }
-  /* line 44, ../scss/_slider.scss */
+  /* line 116, ../bower_components/foundation/scss/foundation/components/_global.scss */
+  li.face:before, li.face:after {
+    content: " ";
+    display: table;
+  }
+  /* line 117, ../bower_components/foundation/scss/foundation/components/_global.scss */
+  li.face:after {
+    clear: both;
+  }
+  /* line 37, ../scss/_slider.scss */
   li.face img {
     max-width: 100%;
   }

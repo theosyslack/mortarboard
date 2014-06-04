@@ -1,9 +1,11 @@
 ul#slider{
+	@include transition(none);
 	margin:0px;
 	padding:0px;
 	list-style: none;
 	@include perspective(1000);
 	transform-style: preserve-3d;
+	@include backface-visibility(hidden);
 	.text-content{
 		padding-top: 3em;
 	}
@@ -14,33 +16,24 @@ ul#slider{
 	padding-top: 4em;
 	padding-bottom: 4em;
 	text-align: center;
-	background: #222222;
+	background: green;
 	color: white;
 	cursor: pointer;
 
 }
 @media only screen and (min-width: 40.063em) {
-	.front,.back{
+	.face.active{
+		// @include rotateY(0deg, 1000);
+		visibility: visible;
+	}
+	.face{
 		position: absolute;
-		list-style: none;
-		display: block;
-		background:orange;
-		padding-bottom: .5em;
-		@include perspective(1000);
-		// @include rotateY(-180deg, 1000);
+		top:0;
+		left:0;
 		@include backface-visibility(hidden);
 	}
-	.side.active{
-		// @include rotateY(0deg, 1000);
-		z-index: 1;
-	}
-	.side.notActive{
-		// @include rotateY(0deg, 1000);
-		z-index: -1;
-	}
 	li.face{
-		display: none;
-		border-bottom: none;
+		@include clearfix;
 		img{
 			max-width: 100%;
 		}
