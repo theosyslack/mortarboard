@@ -1,9 +1,24 @@
 // Layout Stylesheet
 
+*{
+	::selection{
+		background: darken($background-color,10%);
+		background: lighten($text-color,90%);
+	}
+	border-radius: .4em;		
+}
+.magellan{
+	background: rgba(0,0,0,.4);
+	color: white;
+}
 #main-title{
 	// background-image: url('/assets/mortarboard.svg');
 	background-size: 100%; 
 }
+.intro-column{
+	background: darken($background-color,10%);
+}
+
 .columns{
 	margin-top: .5em;
 }

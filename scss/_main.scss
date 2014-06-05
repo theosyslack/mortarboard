@@ -1,3 +1,17 @@
+//Main
+
+//Color Pallete
+$orange: #E57941;
+$blue: #6FA9BC;
+$pink: #F8BDCD;
+$turquoise: #66B9A9;
+
+$background-color: $blue;
+$text-color: black;
+
 *{
 	@include transition(all .2s ease-in-out);
+}
+body{
+	background-color: $background-color;
 }

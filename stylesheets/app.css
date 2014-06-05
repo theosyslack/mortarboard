@@ -7790,7 +7790,7 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 1, ../scss/_main.scss */
+/* line 12, ../scss/_main.scss */
 * {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -7798,17 +7798,43 @@ th.hide-for-touch {
   transition: all 0.2s ease-in-out;
 }
 
+/* line 15, ../scss/_main.scss */
+body {
+  background-color: #6fa9bc;
+}
+
 /* line 3, ../scss/_layout.scss */
+* {
+  border-radius: .4em;
+}
+/* line 4, ../scss/_layout.scss */
+* ::selection {
+  background: #4f93a9;
+  background: #e6e6e6;
+}
+
+/* line 10, ../scss/_layout.scss */
+.magellan {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+/* line 14, ../scss/_layout.scss */
 #main-title {
   background-size: 100%;
 }
 
-/* line 7, ../scss/_layout.scss */
+/* line 18, ../scss/_layout.scss */
+.intro-column {
+  background: #4f93a9;
+}
+
+/* line 22, ../scss/_layout.scss */
 .columns {
   margin-top: .5em;
 }
 
-/* line 10, ../scss/_layout.scss */
+/* line 25, ../scss/_layout.scss */
 footer {
   padding-top: 1em;
   padding-bottom: 3em;
@@ -7821,7 +7847,7 @@ body {
 
 /* line 10, ../scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Proxima-Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "jaf-domus-titling-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 /* line 14, ../scss/_typography.scss */
@@ -7859,18 +7885,18 @@ h1, h2, h3, h4, h5, h6 {
 /* line 39, ../scss/_typography.scss */
 .content {
   margin-top: 0.4em;
-  text-align: justify;
 }
-/* line 43, ../scss/_typography.scss */
-.content .intro {
+
+/* line 44, ../scss/_typography.scss */
+.intro {
   font-style: italic;
 }
-/* line 45, ../scss/_typography.scss */
-.content .intro::first-letter {
+/* line 46, ../scss/_typography.scss */
+.intro::first-letter {
   background-image: url(/assets/img/diamond.svg);
   background-repeat: no-repeat;
   float: left;
-  color: white;
+  color: #4f93a9;
   text-align: center;
   padding: 0px;
   padding-right: .2em;
@@ -7880,7 +7906,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3em;
   line-height: 1.5em;
   height: 1.5em;
-  width: 1.5em;
+  width: 1.45em;
+}
+/* line 62, ../scss/_typography.scss */
+.intro p {
+  font-size: 1.23rem;
+  color: #1e3841;
 }
 
 @-webkit-keyframes fadeIn {
@@ -8005,7 +8036,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 1, ../scss/_slider.scss */
-ul#slider {
+#slider {
   -moz-transition: none;
   -o-transition: none;
   -webkit-transition: none;
@@ -8013,48 +8044,104 @@ ul#slider {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  -moz-perspective: 1000;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
-/* line 9, ../scss/_slider.scss */
-ul#slider .text-content {
-  padding-top: 3em;
+/* line 7, ../scss/_slider.scss */
+#slider .text-content ::selection {
+  background: #4f93a9;
+  background: #d7e7ed;
+}
+/* line 12, ../scss/_slider.scss */
+#slider .face {
+  margin-top: 1.5em;
+  padding: .43em 0em;
+  background-color: #4f93a9;
+  *zoom: 1;
+}
+/* line 116, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#slider .face:before, #slider .face:after {
+  content: " ";
+  display: table;
+}
+/* line 117, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#slider .face:after {
+  clear: both;
 }
 
-/* line 13, ../scss/_slider.scss */
-.slider.left, .slider.right {
-  margin-top: .25em;
-  margin-bottom: .25em;
+/* line 20, ../scss/_slider.scss */
+.slider-container ::selection {
+  background: none;
+}
+/* line 24, ../scss/_slider.scss */
+.slider-container .face h1 {
+  font-weight: bold;
+}
+/* line 28, ../scss/_slider.scss */
+.slider-container .left, .slider-container .right {
+  margin-top: 25%;
   padding-top: 4em;
   padding-bottom: 4em;
   text-align: center;
-  background: green;
+  background: #3f7586;
   color: white;
   cursor: pointer;
 }
+/* line 38, ../scss/_slider.scss */
+.slider-container .left {
+  -moz-transform: translateX(-0.5em);
+  -ms-transform: translateX(-0.5em);
+  -webkit-transform: translateX(-0.5em);
+  transform: translateX(-0.5em);
+}
+/* line 39, ../scss/_slider.scss */
+.slider-container .left img {
+  -moz-transform: perspective(1000) rotateY(180deg);
+  -webkit-transform: perspective(1000) rotateY(180deg);
+  transform: perspective(1000) rotateY(180deg);
+}
+/* line 43, ../scss/_slider.scss */
+.slider-container .left:hover {
+  -moz-transform: translateX(-1em);
+  -ms-transform: translateX(-1em);
+  -webkit-transform: translateX(-1em);
+  transform: translateX(-1em);
+  background: #478498;
+}
+/* line 48, ../scss/_slider.scss */
+.slider-container .right {
+  -moz-transform: translateX(0.5em);
+  -ms-transform: translateX(0.5em);
+  -webkit-transform: translateX(0.5em);
+  transform: translateX(0.5em);
+}
+/* line 50, ../scss/_slider.scss */
+.slider-container .right:hover {
+  -moz-transform: translateX(1em);
+  -ms-transform: translateX(1em);
+  -webkit-transform: translateX(1em);
+  transform: translateX(1em);
+  background: #478498;
+}
 
 @media only screen and (min-width: 40.063em) {
-  /* line 25, ../scss/_slider.scss */
-  .face.active {
-    visibility: visible;
-  }
-
-  /* line 29, ../scss/_slider.scss */
+  /* line 59, ../scss/_slider.scss */
   .face {
     position: absolute;
-    top: 0;
-    left: 0;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    top: -10px;
+    left: -10px;
+    opacity: 0;
+    z-index: -1;
   }
 
-  /* line 35, ../scss/_slider.scss */
+  /* line 66, ../scss/_slider.scss */
+  .face.active {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  /* line 76, ../scss/_slider.scss */
   li.face {
     *zoom: 1;
   }
@@ -8066,9 +8153,5 @@ ul#slider .text-content {
   /* line 117, ../bower_components/foundation/scss/foundation/components/_global.scss */
   li.face:after {
     clear: both;
-  }
-  /* line 37, ../scss/_slider.scss */
-  li.face img {
-    max-width: 100%;
   }
 }

@@ -1,41 +1,79 @@
-ul#slider{
+#slider{
 	@include transition(none);
 	margin:0px;
 	padding:0px;
 	list-style: none;
-	@include perspective(1000);
-	transform-style: preserve-3d;
-	@include backface-visibility(hidden);
 	.text-content{
-		padding-top: 3em;
-	}
-}
-.slider.left, .slider.right{
-	margin-top: .25em;
-	margin-bottom: .25em;
-	padding-top: 4em;
-	padding-bottom: 4em;
-	text-align: center;
-	background: green;
-	color: white;
-	cursor: pointer;
-
-}
-@media only screen and (min-width: 40.063em) {
-	.face.active{
-		// @include rotateY(0deg, 1000);
-		visibility: visible;
+		::selection{
+			background: darken($background-color,10%);
+			background: lighten($blue,30%);
+		}
 	}
 	.face{
+		margin-top: 1.5em;
+		padding: .43em 0em;
+		background-color: darken($blue,10%);
+		@include clearfix;
+	}
+}
+.slider-container{
+	::selection{
+		background: none;
+	}
+	.face{
+		h1{
+			font-weight: bold;
+		}
+	}	
+	.left, .right{
+		margin-top: 25%;
+		padding-top: 4em;
+		padding-bottom: 4em;
+		text-align: center;
+		background: darken($blue, 20%);
+		color: white;
+		cursor: pointer;
+
+	}
+	.left{
+		img{
+			@include rotateY(180deg, 1000);
+		}
+		@include translateX(-.5em);
+		&:hover{
+			@include translateX(-1em);
+			background: darken($blue, 15%);
+		}
+	}
+	.right{
+		@include translateX(.5em);
+		&:hover{
+			@include translateX(1em);
+			background: darken($blue, 15%);
+		}
+	}
+}
+
+
+@media only screen and (min-width: 40.063em) {
+	.face{
 		position: absolute;
-		top:0;
-		left:0;
-		@include backface-visibility(hidden);
+		top: -10px;
+		left: -10px;
+		opacity: 0;
+		z-index: -1;
+	}
+	.face.active{
+		position: relative;
+		// @include rotateY(0deg, 1000);
+		// // display: block;
+		top: 0px;
+		left: 0px;
+		opacity: 1;
+		z-index: 2;
+
 	}
 	li.face{
 		@include clearfix;
-		img{
-			max-width: 100%;
-		}
 	}
 }

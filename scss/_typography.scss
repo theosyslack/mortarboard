@@ -1,6 +1,6 @@
 
 $body-font-family: "Proxima-Nova","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$headline-font-family: "Proxima-Nova" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headline-font-family: "jaf-domus-titling-web" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $byline-margin: 1em;
 
 body{
@@ -38,15 +38,16 @@ h1, h2, h3, h4, h5, h6{
 }
 .content{
 	margin-top: $byline-margin*.4;
-	text-align: justify;
+	// text-align: justify;
+}
 
-	.intro{
+.intro{
 		font-style: italic;
 		&::first-letter{
 			background-image: url(/assets/img/diamond.svg);
 			background-repeat: no-repeat;
 			float:left;
-			color: white;
+			color: darken($background-color,10%);
 			text-align: center;
 			padding: 0px;
 			padding-right: .2em;
@@ -56,7 +57,10 @@ h1, h2, h3, h4, h5, h6{
 			font-size: 3em;
 			line-height: 1.5em;
 			height: 1.5em;
-			width: 1.5em;
+			width: 1.45em;
+		}
+		p{
+			font-size: 1.23rem;
+			color: darken($background-color, 40%);
 		}
 	}
-}
